@@ -3,7 +3,12 @@ const cities = require('./cities');
 const { places, descriptors } = require('./seedHelpers');
 const Campground = require('../models/campground');
 
-mongoose.connect('mongodb://localhost:27017/yelp-camp', {
+MongoClient.connect("mongodb://localhost:27017/yelp-camp1", function (err, db) {
+     if(err) throw err;   
+  // Use this space to pass MongoDB CRUD code here             
+});
+
+mongoose.connect('mongodb://localhost:27017/yelp-camp1', {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true
